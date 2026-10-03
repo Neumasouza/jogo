@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>MEGAMANIA Clone — Shmup Espacial</title>
+<meta name="description" content="Shmup de tela fixa estilo Megamania: nave, 5 ondas, barra de energia. Desktop + Mobile.">
+<meta name="theme-color" content="#000000">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="cabinet">
+  <div id="screen-wrap">
+    <canvas id="game" width="240" height="320"></canvas>
+
+    <div id="overlay" class="show">
+      <h1>MEGA<span>MANIA</span></h1>
+      <p class="sub">CLONE 8-BIT</p>
+      <div class="help">
+        <p>◀ ▶ / A D — mover</p>
+        <p>ESPAÇO / toque FIRE — atirar</p>
+        <p>Limpe a onda antes da energia acabar!</p>
+      </div>
+      <button id="btn-start">▶ INICIAR</button>
+      <p class="tiny">desktop + mobile</p>
+    </div>
+
+    <div id="banner" class="hidden"></div>
+    <div id="gameover" class="hidden">
+      <h2 id="go-title">GAME OVER</h2>
+      <p id="go-score">SCORE 0</p>
+      <p id="go-hi">HI 0</p>
+      <button id="btn-retry">↻ JOGAR DE NOVO</button>
+    </div>
+  </div>
+
+  <div id="touch">
+    <button id="t-left" aria-label="Esquerda">◀</button>
+    <button id="t-fire" aria-label="Atirar">FIRE</button>
+    <button id="t-right" aria-label="Direita">▶</button>
+  </div>
+  <p id="hint">Setas/AD movem · Espaço atira · Energia drena sempre</p>
+</div>
+
+<script src="js/audio.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/input.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
